@@ -57,10 +57,10 @@ def _call_openai(system: str, user: str, max_tokens: int) -> str:
 def call_llm(system: str, user: str, *, max_tokens: int = LLM_MAX_TOKENS) -> str:
     """调用 LLM，返回文本响应。根据 LLM_PROVIDER 环境变量自动选择 provider。"""
     provider = _get_provider()
-    if provider == "openai":
-        return _call_openai(system, user, max_tokens)
-    else:
+    if provider == "anthropic":
         return _call_anthropic(system, user, max_tokens)
+    else:
+        return _call_openai(system, user, max_tokens)
 
 
 def call_llm_json(system: str, user: str, *, max_tokens: int = LLM_MAX_TOKENS) -> dict:

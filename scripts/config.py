@@ -23,7 +23,7 @@ REQUIRED_FRONTMATTER = ["title", "category", "tags", "sources", "created", "upda
 
 # LLM 配置
 # 支持 anthropic / openai，通过环境变量 LLM_PROVIDER 切换
-LLM_PROVIDER = os.environ.get("LLM_PROVIDER", "anthropic")  # "anthropic" | "openai"
+LLM_PROVIDER = os.environ.get("LLM_PROVIDER", "openai")  # "openai" | "anthropic"
 LLM_MAX_TOKENS = 4096
 
 # 各 provider 默认模型
