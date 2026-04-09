@@ -6,4 +6,6 @@ __pycache__/
 dist/
 build/
 .env
+.venv/
+uv.lock
 evals/results/*.json

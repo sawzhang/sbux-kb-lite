@@ -12,25 +12,25 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ```bash
 # 本地 ingest（不需要 API key，确定性转换）
-python3 scripts/ingest_local.py
+uv run scripts/ingest_local.py
 
 # API ingest（需要 ANTHROPIC_API_KEY，更智能的拆分）
-python3 scripts/ingest.py sources/xxx.md
+uv run scripts/ingest.py sources/xxx.md
 
 # 查询（Claude Code 模式，输出检索结果供 Claude Code 回答）
-python3 scripts/query.py "星巴克的Logo有什么含义？"
+uv run scripts/query.py "星巴克的Logo有什么含义？"
 
 # 查询（API 模式）
-python3 scripts/query.py --api "问题"
+uv run scripts/query.py --api "问题"
 
 # 查询（JSON 输出）
-python3 scripts/query.py --json "问题"
+uv run scripts/query.py --json "问题"
 
 # 健康检查
-python3 scripts/lint.py
+uv run scripts/lint.py
 
 # 查看搜索主题列表
-python3 scripts/crawl.py --standalone
+uv run scripts/crawl.py --standalone
 ```
 
 ## Architecture
