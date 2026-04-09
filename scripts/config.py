@@ -1,5 +1,6 @@
 """项目配置"""
 
+import os
 from pathlib import Path
 
 # 项目根目录
@@ -21,5 +22,12 @@ CATEGORIES = ["brand", "coffee", "products", "culture"]
 REQUIRED_FRONTMATTER = ["title", "category", "tags", "sources", "created", "updated"]
 
 # LLM 配置
-LLM_MODEL = "claude-sonnet-4-20250514"
+# 支持 anthropic / openai，通过环境变量 LLM_PROVIDER 切换
+LLM_PROVIDER = os.environ.get("LLM_PROVIDER", "anthropic")  # "anthropic" | "openai"
 LLM_MAX_TOKENS = 4096
+
+# 各 provider 默认模型
+LLM_MODELS = {
+    "anthropic": os.environ.get("ANTHROPIC_MODEL", "claude-sonnet-4-20250514"),
+    "openai": os.environ.get("OPENAI_MODEL", "gpt-4o"),
+}

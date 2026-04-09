@@ -12,4 +12,5 @@ dependencies = [
 [project.optional-dependencies]
 api = [
     "anthropic>=0.40.0",
+    "openai>=1.0.0",
 ]
