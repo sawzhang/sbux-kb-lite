@@ -18,20 +18,45 @@
 - [yologdev/karpathy-llm-wiki](https://github.com/yologdev/karpathy-llm-wiki) — 社区实现参考，验证了 ingest/query/lint 三件套的可行性
 - [Graphify](https://github.com/safishamsi/graphify) — 知识图谱方案参考（本项目选择了更轻量的 wiki 路线）
 
-## 架构
+## 数据流概览 / Dataflow Overview
 
 ```
-sources/        原始文章（不可变，人工或爬虫收集）
-    ↓ ingest
-wiki/           LLM 生成的结构化 wiki 页面（自动维护）
-    ↓ query
-回答            基于 wiki 页面的知识回答
+                         ┌─────────────────────┐
+                         │        用户           │
+                         │ CURATE · EXPLORE · Q  │
+                         └───┬──────────────┬───┘
+                    策展 │   │ 提问·反馈     │ 回答·综合       │ 浏览
+                     ┌───▼───┼──────────────▼───┐         │
+                     │       ▼                  │         │
+  ┌────────────┐ 读取 │   ┌──────────────┐  写入 │  ┌──────▼───────┐
+  │  原始资料   │─────►│   │  LLM 代理     │──────┼─►│ Wiki 知识库   │
+  │ RAW SOURCES │◄─────│   │ INGEST·QUERY │◄─────┼──│PERSISTENT WIKI│
+  └────────────┘ 共同  │   │    ·LINT     │ 检索 │  └──────────────┘
+                 演化  │   └──────▲───────┘      │
+                       │          │              │
+                       │   ┌──────┴───────┐      │
+                       │   │   配置模式    │      │
+                       │   │ SCHEMA·CLAUDE │      │
+                       │   │  .MD/AGENTS   │      │
+                       │   └──────────────┘      │
+                       └─────────────────────────┘
 ```
 
-三层结构：
-- **Raw Sources** (`sources/`) — 原始文章，不可修改
-- **The Wiki** (`wiki/`) — LLM 维护的结构化 markdown 页面
-- **The Schema** (`schema/`) — wiki 规范和分类定义
+**四个核心组件：**
+
+| 组件 | 路径 | 说明 |
+|------|------|------|
+| **原始资料** | `sources/` | 不可变的原始文章，人工或爬虫收集 |
+| **LLM 代理** | `scripts/` | 执行 Ingest（消化）、Query（查询）、Lint（校验）三大操作 |
+| **Wiki 知识库** | `wiki/` | LLM 维护的结构化 markdown 页面，持久化知识资产 |
+| **配置模式** | `schema/` | Wiki 结构规范、分类定义、LLM 行为指引 |
+
+**数据流向：**
+
+1. **Ingest**：LLM 读取原始资料 → 消化为结构化 wiki 页面 → 写入知识库
+2. **Query**：用户提问 → LLM 检索 wiki 页面 → 综合回答
+3. **Lint**：LLM 校验 wiki 完整性（断链、孤立页、Schema 合规）
+4. **Curate**：用户策展原始资料，与 LLM 共同演化知识库
 
 ## 快速开始
 
