@@ -1,0 +1,106 @@
+# Wiki 索引
+
+> 本文件由 ingest 脚本自动维护，列出所有 wiki 页面及一句话摘要。
+
+<!-- AUTO-GENERATED INDEX START -->
+- [C.A.F.E. Practices：星巴克的咖啡采购认证体系](brand/cafe-practices-certification.md) [brand] — C.A.F.E. Practices（Coffee and Farmer Equity Practices）是星巴克于2004年与保护国际（Conservation International）合作开发的咖啡采购认证体系。
+- [星巴克中国本土化策略：产品、门店与下沉市场](brand/china-localization-strategy.md) [brand] — 星巴克在中国市场的成功，很大程度上归功于其深入而系统的本土化策略。
+- [星巴克中国市场：从1家到7000+门店的增长传奇](brand/china-market-growth.md) [brand] — 星巴克在中国的发展历程是一部令人瞩目的商业增长史。
+- [星巴克全球扩张时间线：从西雅图到全世界](brand/global-expansion-timeline.md) [brand] — 星巴克的全球扩张是商业史上最引人注目的增长故事之一。
+- [霍华德·舒尔茨：从布鲁克林贫民区到咖啡帝王](brand/howard-schultz-story.md) [brand] — 霍华德·舒尔茨（Howard Schultz）1953年7月19日出生于纽约布鲁克林的一个公共住房项目（Bayview Projects）。
+- [Il Giornale：舒尔茨的咖啡创业与星巴克收购](brand/il-giornale-founding.md) [brand] — 1985年，霍华德·舒尔茨离开星巴克，创办了自己的意式咖啡公司——Il Giornale（意大利语，意为"日报"）。
+- [星巴克Logo四次演变：从棕色美人鱼到绿色图标](brand/logo-evolution-history.md) [brand] — 星巴克的Logo在品牌半个多世纪的历史中经历了四次重大演变，每一次变化都反映了品牌战略的转型和时代审美的变迁。
+- [星巴克Logo中的塞壬：古希腊神话的咖啡化身](brand/logo-siren-mythology.md) [brand] — 星巴克Logo中那位神秘的双尾美人鱼，其形象源自古希腊神话中的塞壬（Siren）。
+- [星巴克与Peet's Coffee的渊源](brand/peet-coffee-connection.md) [brand] — 星巴克的诞生，离不开一个关键人物和一家咖啡店——Alfred Peet和他创办的Peet's Coffee & Tea。
+- [1983年米兰之行：改变星巴克命运的一杯浓缩咖啡](brand/schultz-italy-trip.md) [brand] — 1983年春天，时任星巴克零售运营总监的霍华德·舒尔茨前往意大利米兰参加国际家居用品展。
+- [上海烘焙工坊：全球最大星巴克的咖啡奇境](brand/shanghai-roastery.md) [brand] — 2017年12月5日，星巴克臻选上海烘焙工坊（Starbucks Reserve Roastery Shanghai）在上海南京西路兴业太古汇正式开业。
+- [星巴克品牌哲学：我们不只是卖咖啡](brand/starbucks-brand-philosophy.md) [brand] — 霍华德·舒尔茨曾多次说过："我们不是做咖啡生意服务于人，而是做人的生意服务于咖啡。
+- [星巴克CEO更迭史](brand/starbucks-ceo-succession.md) [brand] — 星巴克的领导层变迁反映了公司不同发展阶段的战略重心。
+- [1999年星巴克进入中国：北京国贸第一家店](brand/starbucks-china-entry.md) [brand] — 1999年1月11日，星巴克在北京中国国际贸易中心（国贸）开设了中国大陆的第一家门店。
+- [星巴克在中国的竞争：瑞幸、库迪与本土品牌崛起](brand/starbucks-competitors-china.md) [brand] — 星巴克在中国市场曾长期占据咖啡行业的统治地位，但近年来面临越来越激烈的本土竞争。
+- [星巴克数字化转型之路](brand/starbucks-digital-transformation.md) [brand] — 使用星礼卡支付并享受加速积星
+- [星巴克1971年创立：从派克市场走向世界](brand/starbucks-founding-1971.md) [brand] — 1971年3月30日，三位来自西雅图的年轻人——杰瑞·鲍德温（Jerry Baldwin）、泽夫·西格尔（Zev Siegl）和戈登·鲍克（Gordon Bowker）——在西雅图派克市场（Pike Place Market）开设了第一家星巴克门店。
+- [星巴克的创新文化](brand/starbucks-innovation-culture.md) [brand] — 星巴克从来不只是一家咖啡公司。
+- [1992年星巴克纳斯达克上市：咖啡股的诞生](brand/starbucks-ipo-1992.md) [brand] — 1992年6月26日，星巴克在纳斯达克证券交易所（NASDAQ）成功上市，股票代码为SBUX。
+- [星巴克星享俱乐部会员体系](brand/starbucks-membership-system.md) [brand] — **银星会员**：注册即可获得
+- [星巴克企业使命宣言与核心价值观](brand/starbucks-mission-values.md) [brand] — 星巴克的企业使命宣言是品牌文化的基石，指引着从门店运营到全球战略的每一个决策。
+- [星巴克品牌命名：白鲸记中的大副Starbuck](brand/starbucks-name-origin.md) [brand] — 星巴克（Starbucks）这个名字的诞生，是文学、航海与咖啡文化交织的产物。
+- [派克市场原始门店：星巴克的朝圣地](brand/starbucks-pike-place-store.md) [brand] — 位于西雅图派克市场（Pike Place Market）的星巴克第一家门店，是全球咖啡爱好者的朝圣地，也是星巴克品牌故事的起点。
+- [星巴克营收规模：全球咖啡帝国的商业版图](brand/starbucks-revenue-scale.md) [brand] — 星巴克是全球最大的咖啡连锁企业，其商业规模令人瞩目。
+- [星巴克云南咖啡种植合作项目](brand/starbucks-yunnan-project.md) [brand] — 云南省是中国最主要的咖啡产区，占全国咖啡产量的95%以上。
+- [阿拉比卡 vs 罗布斯塔：两大咖啡品种对比](coffee/arabica-vs-robusta.md) [coffee] — 全球商业咖啡市场主要由两大品种主导：阿拉比卡（Coffea arabica）和罗布斯塔（Coffea canephora）。
+- [浅烘焙详解：保留产地风味的轻盈口感](coffee/blonde-roast-explained.md) [coffee] — 浅烘焙（Light Roast）是在一爆结束后不久即出豆的烘焙程度，豆色为浅棕色至肉桂色。
+- [巴西：全球最大咖啡生产国](coffee/brazil-coffee-production.md) [coffee] — 巴西自19世纪以来一直是全球最大的咖啡生产国和出口国，年产量约占世界总量的三分之一。
+- [咖啡豆知识](coffee/coffee-bean-knowledge.md) [coffee] — 占全球咖啡产量约60-70%
+- [咖啡因科普](coffee/coffee-caffeine-facts.md) [coffee] — 一杯标准星巴克大杯（Grande）美式咖啡含约225mg咖啡因
+- [杯测：专业品鉴咖啡的方法](coffee/coffee-cupping-guide.md) [coffee] — **香气（Aroma）**：干香和湿香的强度和品质
+- [咖啡风味轮](coffee/coffee-flavor-wheel.md) [coffee] — **内圈**：大类（水果、花香、坚果、巧克力、焦糖、香料等）
+- [研磨度对咖啡风味的影响](coffee/coffee-grind-size.md) [coffee] — 研磨度是影响咖啡萃取的关键变量之一，不同的冲煮方式需要不同的研磨度。
+- [咖啡处理法](coffee/coffee-processing-methods.md) [coffee] — 咖啡果实采摘后需要经过处理才能得到可烘焙的咖啡生豆。
+- [咖啡烘焙基础：从生豆到熟豆](coffee/coffee-roasting-basics.md) [coffee] — 咖啡烘焙是将绿色的咖啡生豆转化为棕色芳香熟豆的热加工过程。
+- [水质对咖啡的影响](coffee/coffee-water-quality.md) [coffee] — TDS过低（如纯净水）：水缺乏矿物质，萃取力弱，咖啡味道寡淡
+- [冷萃咖啡的制作与魅力](coffee/cold-brew-method.md) [coffee] — **低酸度**：冷水萃取减少了约67%的酸性物质
+- [哥伦比亚咖啡：均衡口感的经典](coffee/colombia-coffee.md) [coffee] — 哥伦比亚是全球第三大咖啡生产国，也是最大的水洗阿拉比卡出口国。
+- [深烘焙：浓郁厚重的焦糖烟熏调](coffee/dark-roast-character.md) [coffee] — 深烘焙（Dark Roast）是在二爆开始时或之后出豆的烘焙程度，豆色为深棕色至近黑色，表面通常有明显的油脂渗出。
+- [脱因咖啡的制作过程](coffee/decaf-coffee-process.md) [coffee] — 脱因咖啡（Decaf）让不想摄入咖啡因的人也能享受咖啡的风味。
+- [意式浓缩咖啡的科学](coffee/espresso-science.md) [coffee] — **粉量**：18-20克细研磨咖啡粉
+- [埃塞俄比亚：咖啡的发源地](coffee/ethiopia-coffee-origin.md) [coffee] — 埃塞俄比亚不仅是阿拉比卡咖啡的基因故乡，也是全球咖啡文化的起源地。
+- [法压壶冲煮咖啡](coffee/french-press-brewing.md) [coffee] — **醇厚饱满**：由于保留了咖啡油脂，口感比滤纸冲煮更厚重
+- [危地马拉咖啡：火山土壤赋予的浓郁](coffee/guatemala-coffee.md) [coffee] — 危地马拉是中美洲最重要的精品咖啡产国之一，其独特的火山地质和多样的微气候孕育出层次丰富、醇厚浓郁的咖啡。
+- [肯尼亚咖啡：黑加仑般的果酸](coffee/kenya-coffee-flavor.md) [coffee] — 肯尼亚咖啡以其独特而强烈的黑加仑（黑醋栗）风味和明亮的酸质享誉全球，被许多精品咖啡专家视为世界上最优秀的咖啡之一。
+- [咖啡拉花艺术基础](coffee/latte-art-basics.md) [coffee] — **Espresso品质**：需要有丰富的Crema作为"画布"
+- [利比里亚种：被遗忘的第三大咖啡品种](coffee/liberica-coffee.md) [coffee] — 在阿拉比卡和罗布斯塔主导全球咖啡市场的今天，利比里亚种（Coffea liberica）常常被忽略。
+- [中烘焙：平衡产地与烘焙风味](coffee/medium-roast-balance.md) [coffee] — 中烘焙（Medium Roast）位于浅烘焙和深烘焙之间，出豆时间在一爆结束和二爆开始之间。
+- [手冲咖啡指南](coffee/pour-over-guide.md) [coffee] — **滤杯**：V60、Kalita、Chemex等
+- [从种子到杯子的旅程](coffee/seed-to-cup-journey.md) [coffee] — "From Seed to Cup"（从种子到杯子）是星巴克强调的全链路品质管控理念。
+- [单一产地与拼配咖啡](coffee/single-origin-vs-blend.md) [coffee] — 风味个性鲜明，反映产地特征
+- [虹吸壶咖啡](coffee/siphon-coffee.md) [coffee] — **水温控制**：理想萃取温度91-94°C
+- [星巴克品牌故事](coffee/starbucks-brand-story.md) [coffee] — **1971年**：棕色Logo，展示完整的双尾美人鱼形象，风格较为原始和写实
+- [星巴克烘焙工艺](coffee/starbucks-roasting-craft.md) [coffee] — **Blonde Roast（浅烘焙）**：在第一次爆裂时或之前停止，保留更多产地风味
+- [苏门答腊咖啡：独特的湿刨法和泥土风味](coffee/sumatra-coffee.md) [coffee] — 印度尼西亚苏门答腊岛出产的咖啡以其浓厚的醇度、低酸度和独特的泥土、草本风味闻名于世。
+- [耶加雪菲：非洲最负盛名的咖啡产区](coffee/yirgacheffe-coffee.md) [coffee] — 耶加雪菲（Yirgacheffe）位于埃塞俄比亚南部的盖迪奥地区（Gedeo Zone），是全球精品咖啡界最受推崇的产区之一。
+- [云南咖啡风土：中国的咖啡产区](coffee/yunnan-coffee-terroir.md) [coffee] — 云南省是中国最重要的咖啡产区，产量占全国总量的95%以上。
+- [星巴克咖啡师培训体系](culture/barista-training.md) [culture] — **咖啡知识**：咖啡豆品种、产地、烘焙度、冲煮原理
+- [星巴克城市杯收藏文化](culture/city-mug-collection.md) [culture] — **Collectors Series**（收藏者系列）：最经典的系列，以城市地标为主题
+- [星巴克社区参与和公益](culture/community-engagement.md) [culture] — 星巴克的使命宣言中明确提到"每个社区"（every neighborhood），社区参与是品牌文化的重要组成部分。
+- [杯子上写名字的传统](culture/customer-name-on-cup.md) [culture] — 走进星巴克，点完单后咖啡师会问你的名字，并写在杯子上。
+- [数字化第三空间](culture/digital-third-place.md) [culture] — **个性化推荐**：基于消费历史的饮品推荐
+- [星巴克免费WiFi与第三空间体验](culture/free-wifi-policy.md) [culture] — 让门店成为办公和学习的理想场所
+- [星巴克围裙等级制度](culture/green-apron-black-apron.md) [culture] — **笔试**：考核咖啡理论知识——产地、品种、烘焙、冲煮等
+- [星巴克绿色门店认证计划](culture/greener-store-program.md) [culture] — 星巴克的Greener Store（绿色门店）认证计划是全球餐饮行业最具雄心的可持续门店标准之一。
+- [星巴克非遗概念店](culture/non-heritage-concept-stores.md) [culture] — 为传统手工艺人提供展示平台
+- [星巴克伙伴福利体系](culture/partner-benefits.md) [culture] — 星巴克以其业界领先的员工福利而闻名，这些福利覆盖全职和兼职伙伴。
+- [星巴克伙伴文化](culture/partner-culture.md) [culture] — **沟通平等**：无论职级，都用名字互称，不用"X总""X经理"
+- [疫情后第三空间的重新定义](culture/post-pandemic-space.md) [culture] — 大力推广移动点单和无接触取餐
+- [Ray Oldenburg与第三空间理论](culture/ray-oldenburg-third-place.md) [culture] — **第一空间（First Place）**：家——私密、安全、归属的空间
+- [星巴克自带杯与减塑行动](culture/reusable-cup-initiative.md) [culture] — 自带杯优惠是星巴克最持久的环保举措之一，从第一家门店开始就一直延续至今。
+- [星巴克与艺术文化](culture/starbucks-art-culture.md) [culture] — 上海烘焙工坊的1000个中国传统印章装饰的巨型铜罐
+- [星巴克得来速与外带文化](culture/starbucks-drive-through.md) [culture] — 第三空间强调停留和社交
+- [星巴克道德采购体系](culture/starbucks-ethical-sourcing.md) [culture] — **产品质量**：杯测分数达到标准
+- [星巴克圣诞红杯文化](culture/starbucks-holiday-cups.md) [culture] — 早期以传统圣诞元素为主：雪花、驯鹿、圣诞树
+- [星巴克门店音乐文化](culture/starbucks-music-culture.md) [culture] — 适中的音量，不干扰交谈
+- [星巴克宠物友好门店](culture/starbucks-pet-friendly.md) [culture] — 随着宠物文化的兴起，星巴克在全球多个市场推出了宠物友好服务。
+- [星巴克臻选体验](culture/starbucks-reserve-experience.md) [culture] — 黑鹰半自动浓缩咖啡机（Black Eagle VA388）
+- [星巴克门店设计哲学](culture/store-design-philosophy.md) [culture] — 靠窗位置适合独处和工作
+- [星巴克门店本地化设计案例](culture/store-localization-design.md) [culture] — 星巴克在全球各地的门店设计中融入当地文化，创造了许多令人惊艳的空间。
+- [星巴克可持续发展承诺](culture/sustainability-commitment.md) [culture] — 全面使用可降解材质吸管和直饮杯盖
+- [第三空间理念](culture/third-place-concept.md) [culture] — **第二空间**：工作场所
+- [焦糖玛奇朵的故事](products/caramel-macchiato-story.md) [products] — 焦糖玛奇朵（Caramel Macchiato）是星巴克最受欢迎的饮品之一，也是最常被误解的。
+- [星冰乐发明史](products/frappuccino-history.md) [products] — **咖啡系列**：以Espresso为基底
+- [星巴克月饼礼盒](products/mooncake-gift-box.md) [products] — **咖啡口味月饼**：将星巴克的咖啡元素融入月饼馅料
+- [氮气冷萃咖啡](products/nitro-cold-brew.md) [products] — **丝绒般的质地**：氮气形成的极细微气泡，比碳酸气泡小得多，口感如天鹅绒般绵密
+- [Pike Place烘焙](products/pike-place-roast.md) [products] — **风味**：微妙的可可和烤坚果香气
+- [南瓜拿铁](products/pumpkin-spice-latte.md) [products] — "#PSL" 和 "#PumpkinSpiceLatte" 每年秋天霸占社交媒体
+- [臻选门店独家饮品](products/reserve-exclusive-drinks.md) [products] — **手冲咖啡**：由黑围裙咖啡师现场冲煮单一产地臻选豆
+- [星巴克在家系列](products/starbucks-at-home.md) [products] — 涵盖Blonde、Medium、Dark三种烘焙度
+- [星巴克瓶装即饮产品](products/starbucks-bottled-drinks.md) [products] — 北美市场：与百事可乐合作（North American Coffee Partnership）
+- [星巴克个性化定制文化](products/starbucks-customization.md) [products] — 加浓（Extra Shot）
+- [星巴克食品菜单](products/starbucks-food-menu.md) [products] — **可颂**：黄油可颂、巧克力可颂、杏仁可颂
+- [星巴克拿铁家族](products/starbucks-latte-varieties.md) [products] — **香草拿铁**（Vanilla Latte）：加入香草糖浆，增添甜香
+- [星巴克周边商品](products/starbucks-merchandise.md) [products] — **城市杯**：各城市限定设计，收藏价值高
+- [星巴克植物基产品](products/starbucks-plant-based.md) [products] — 植物基（Plant-based）食品饮品是星巴克可持续发展战略的重要组成部分。
+- [星巴克清爽系列](products/starbucks-refreshers.md) [products] — 不喝咖啡但想走进星巴克的人
+- [星巴克季节限定饮品策略](products/starbucks-seasonal-drinks.md) [products] — **稀缺效应**："过季不候"的紧迫感驱动购买
+- [星巴克隐藏菜单文化](products/starbucks-secret-menu.md) [products] — **棉花糖星冰乐**：香草豆星冰乐 + 覆盆子糖浆
+- [Teavana茶饮系列](products/starbucks-teavana.md) [products] — 经典热茶：英式早餐茶、抹茶、洋甘菊等
+<!-- AUTO-GENERATED INDEX END -->

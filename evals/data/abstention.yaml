@@ -1,0 +1,66 @@
+# 拒答能力测试集
+# 格式: question + 知识库是否有答案 + 期望行为
+# 测试当知识库没有足够信息时，系统是否能诚实拒答
+
+# --- 应该能回答的问题 ---
+- id: abs-01
+  question: "星巴克是哪年创立的？"
+  has_answer: true
+  note: "基础事实，知识库有明确答案"
+
+- id: abs-02
+  question: "什么是星冰乐？"
+  has_answer: true
+  note: "产品知识，知识库有详细介绍"
+
+- id: abs-03
+  question: "耶加雪菲的风味特点"
+  has_answer: true
+  note: "咖啡产地知识，知识库有详细页面"
+
+# --- 应该拒答的问题（超纲） ---
+- id: abs-04
+  question: "星巴克2025年第三季度的财报数据是多少？"
+  has_answer: false
+  note: "实时财务数据不在知识库中"
+
+- id: abs-05
+  question: "星巴克CEO的电话号码是多少？"
+  has_answer: false
+  note: "个人隐私信息，不应存在于知识库"
+
+- id: abs-06
+  question: "星巴克的咖啡机用的是什么型号的压力泵？"
+  has_answer: false
+  note: "过于技术细节的设备信息不在知识库中"
+
+- id: abs-07
+  question: "瑞幸咖啡是怎么创立的？"
+  has_answer: false
+  note: "竞品详细历史不在知识库范围内"
+
+- id: abs-08
+  question: "如何在家复制星巴克的焦糖酱配方？"
+  has_answer: false
+  note: "商业机密配方不在知识库中"
+
+- id: abs-09
+  question: "星巴克某某门店的营业时间？"
+  has_answer: false
+  note: "实时门店信息不在知识库中"
+
+- id: abs-10
+  question: "星巴克和 Costa 哪个更好喝？"
+  has_answer: false
+  note: "主观品味判断，不属于知识库范畴"
+
+# --- 边界情况（部分有答案） ---
+- id: abs-11
+  question: "星巴克中国2025年门店数量的精确数字？"
+  has_answer: false
+  note: "知识库有大致数据但无最新精确数字"
+
+- id: abs-12
+  question: "星巴克哪款饮品卡路里最低？"
+  has_answer: false
+  note: "知识库没有营养信息"

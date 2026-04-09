@@ -1,0 +1,67 @@
+# 一致性测试集
+# 格式: 同一个问题的多种问法，期望检索到相同的 wiki 页面
+# 测试检索系统对同义改写的鲁棒性
+
+- id: cons-01
+  variants:
+    - "星巴克是谁创立的？"
+    - "星巴克的创始人是谁？"
+    - "谁创办了星巴克？"
+    - "Starbucks founders"
+  expect: [starbucks-founding-1971, howard-schultz-story]
+
+- id: cons-02
+  variants:
+    - "什么是第三空间？"
+    - "第三空间是什么意思？"
+    - "Third Place 概念"
+    - "星巴克的第三空间理念"
+  expect: [third-place-concept, ray-oldenburg-third-place]
+
+- id: cons-03
+  variants:
+    - "星巴克Logo的含义"
+    - "星巴克的标志是什么？"
+    - "星巴克美人鱼Logo"
+    - "Starbucks Siren logo"
+  expect: [logo-siren-mythology, logo-evolution-history]
+
+- id: cons-04
+  variants:
+    - "浅烘和深烘有什么区别？"
+    - "咖啡烘焙度的区别"
+    - "light roast vs dark roast"
+    - "浅焙深焙差异"
+  expect: [blonde-roast-explained, dark-roast-character, coffee-roasting-basics]
+
+- id: cons-05
+  variants:
+    - "冷萃咖啡是怎么做的？"
+    - "如何制作冷萃？"
+    - "cold brew 制作方法"
+    - "冷泡咖啡"
+  expect: [cold-brew-method]
+
+- id: cons-06
+  variants:
+    - "星巴克员工叫什么？"
+    - "星巴克伙伴文化"
+    - "为什么星巴克不叫员工？"
+    - "星巴克 partner 文化"
+  expect: [partner-culture, partner-benefits]
+
+- id: cons-07
+  variants:
+    - "星巴克的围裙颜色"
+    - "黑围裙和绿围裙的区别"
+    - "星巴克咖啡大师 Coffee Master"
+    - "星巴克围裙等级"
+  expect: [green-apron-black-apron]
+
+- id: cons-08
+  variants:
+    - "星巴克月饼"
+    - "星巴克中秋礼盒"
+    - "Starbucks mooncake"
+    - "星巴克的中秋节产品"
+  expect: [mooncake-gift-box]

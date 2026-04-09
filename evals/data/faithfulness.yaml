@@ -1,0 +1,68 @@
+# 忠实度测试集
+# 格式: question + wiki context + 一个 answer + 是否忠实
+# LLM-as-Judge 判断 answer 是否完全基于 context，不存在幻觉
+
+- id: faith-01
+  question: "星巴克是哪一年创立的？"
+  wiki_pages: [starbucks-founding-1971]
+  answer: "星巴克于1971年3月30日在西雅图派克市场创立。"
+  expected_verdict: faithful
+  note: "事实直接来自 wiki 页面"
+
+- id: faith-02
+  question: "星巴克的创始人是谁？"
+  wiki_pages: [starbucks-founding-1971]
+  answer: "星巴克由杰瑞·鲍德温、泽夫·西格尔、戈登·鲍克和霍华德·舒尔茨四人共同创立。"
+  expected_verdict: unfaithful
+  note: "Schultz 不是创始人，是后来收购的，这是幻觉"
+
+- id: faith-03
+  question: "星巴克 Logo 中的美人鱼叫什么？"
+  wiki_pages: [logo-siren-mythology]
+  answer: "星巴克 Logo 中的双尾美人鱼形象源自古希腊神话中的塞壬（Siren），设计灵感来自16世纪的北欧木刻版画。"
+  expected_verdict: faithful
+
+- id: faith-04
+  question: "星巴克在中国有多少家门店？"
+  wiki_pages: [china-market-growth]
+  answer: "截至2024年，星巴克在中国拥有超过10000家门店，是全球门店数最多的市场。"
+  expected_verdict: unfaithful
+  note: "wiki 说的是 7000+，不是 10000，且中国是第二大市场不是最大"
+
+- id: faith-05
+  question: "什么是第三空间？"
+  wiki_pages: [third-place-concept]
+  answer: "第三空间是由社会学家 Ray Oldenburg 提出的概念，指家和工作场所之外的公共社交场所。星巴克将这一理念作为品牌哲学的核心。"
+  expected_verdict: faithful
+
+- id: faith-06
+  question: "冷萃咖啡和冰美式有什么区别？"
+  wiki_pages: [cold-brew-method]
+  answer: "冷萃使用室温或冷水长时间浸泡（12-24小时），酸度低、自然甜感强；冰美式是热水萃取后加冰，冷萃的咖啡因含量比冰美式高出30%。"
+  expected_verdict: unfaithful
+  note: "wiki 中没有提到冷萃比冰美式咖啡因高30%这个数据"
+
+- id: faith-07
+  question: "星巴克的围裙有几种颜色？"
+  wiki_pages: [green-apron-black-apron]
+  answer: "星巴克主要有三种围裙：绿色（普通伙伴）、黑色（咖啡大师 Coffee Master）和咖啡色（全国咖啡公使）。此外还有紫色和橙色用于特殊活动。"
+  expected_verdict: faithful
+
+- id: faith-08
+  question: "星巴克的南瓜拿铁"
+  wiki_pages: [pumpkin-spice-latte]
+  answer: "南瓜拿铁（PSL）于2003年首次推出，累计销售额超过50亿美元，是全球最成功的季节限定饮品。"
+  expected_verdict: unfaithful
+  note: "wiki 说的是超过10亿美元，不是50亿"
+
+- id: faith-09
+  question: "阿拉比卡和罗布斯塔的区别"
+  wiki_pages: [arabica-vs-robusta]
+  answer: "阿拉比卡风味更复杂细腻，咖啡因含量约1.2%，占全球产量60-70%；罗布斯塔味道更浓烈苦涩，咖啡因约2.2%，抗病性强。星巴克只使用100%阿拉比卡咖啡豆。"
+  expected_verdict: faithful
+
+- id: faith-10
+  question: "星巴克上海烘焙工坊多大？"
+  wiki_pages: [shanghai-roastery]
+  answer: "星巴克上海烘焙工坊面积2700平方米，是全球最大的星巴克门店。"
+  expected_verdict: faithful

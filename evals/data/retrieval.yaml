@@ -1,0 +1,174 @@
+# 检索准确率测试集
+# 格式: question + expected wiki page stems (至少命中一个算成功)
+
+# --- Brand ---
+- q: "星巴克是谁创立的？"
+  expect: [starbucks-founding-1971, howard-schultz-story]
+  category: brand
+
+- q: "星巴克的Logo是什么意思？"
+  expect: [logo-siren-mythology, logo-evolution-history]
+  category: brand
+
+- q: "Howard Schultz的故事"
+  expect: [howard-schultz-story, schultz-italy-trip]
+  category: brand
+
+- q: "星巴克中国有多少家门店？"
+  expect: [china-market-growth, starbucks-china-entry]
+  category: brand
+
+- q: "星巴克品牌名字怎么来的？"
+  expect: [starbucks-name-origin]
+  category: brand
+
+- q: "星巴克上海烘焙工坊"
+  expect: [shanghai-roastery]
+  category: brand
+
+- q: "星巴克的使命是什么？"
+  expect: [starbucks-mission-values]
+  category: brand
+
+- q: "星巴克会员体系怎么积星？"
+  expect: [starbucks-membership-system]
+  category: brand
+
+- q: "星巴克在云南做了什么？"
+  expect: [starbucks-yunnan-project, yunnan-coffee-terroir]
+  category: brand
+
+- q: "星巴克和瑞幸的竞争"
+  expect: [starbucks-competitors-china]
+  category: brand
+
+- q: "星巴克派克市场第一家店"
+  expect: [starbucks-pike-place-store, starbucks-founding-1971]
+  category: brand
+
+- q: "星巴克IPO上市"
+  expect: [starbucks-ipo-1992]
+  category: brand
+
+# --- Coffee ---
+- q: "阿拉比卡和罗布斯塔有什么区别？"
+  expect: [arabica-vs-robusta]
+  category: coffee
+
+- q: "耶加雪菲咖啡什么风味？"
+  expect: [yirgacheffe-coffee, ethiopia-coffee-origin]
+  category: coffee
+
+- q: "浅烘和深烘有什么区别？"
+  expect: [blonde-roast-explained, dark-roast-character]
+  category: coffee
+
+- q: "怎么做手冲咖啡？"
+  expect: [pour-over-guide]
+  category: coffee
+
+- q: "冷萃咖啡是怎么做的？"
+  expect: [cold-brew-method, nitro-cold-brew]
+  category: coffee
+
+- q: "咖啡因含量多少？"
+  expect: [coffee-caffeine-facts]
+  category: coffee
+
+- q: "什么是咖啡风味轮？"
+  expect: [coffee-flavor-wheel]
+  category: coffee
+
+- q: "苏门答腊咖啡有什么特点？"
+  expect: [sumatra-coffee]
+  category: coffee
+
+- q: "咖啡豆的研磨度怎么选？"
+  expect: [coffee-grind-size]
+  category: coffee
+
+- q: "咖啡是怎么从产地到杯子的？"
+  expect: [seed-to-cup-journey]
+  category: coffee
+
+- q: "espresso的压力和温度"
+  expect: [espresso-science]
+  category: coffee
+
+- q: "什么是虹吸壶咖啡？"
+  expect: [siphon-coffee]
+  category: coffee
+
+# --- Culture ---
+- q: "什么是第三空间？"
+  expect: [third-place-concept, ray-oldenburg-third-place]
+  category: culture
+
+- q: "星巴克围裙颜色有什么区别？"
+  expect: [green-apron-black-apron]
+  category: culture
+
+- q: "星巴克员工有什么福利？"
+  expect: [partner-benefits, partner-culture]
+  category: culture
+
+- q: "星巴克门店设计有什么特色？"
+  expect: [store-design-philosophy, store-localization-design]
+  category: culture
+
+- q: "星巴克可持续发展和环保"
+  expect: [sustainability-commitment, greener-store-program]
+  category: culture
+
+- q: "星巴克城市杯是什么？"
+  expect: [city-mug-collection]
+  category: culture
+
+- q: "星巴克圣诞红杯"
+  expect: [starbucks-holiday-cups]
+  category: culture
+
+- q: "星巴克非遗概念店"
+  expect: [non-heritage-concept-stores]
+  category: culture
+
+- q: "星巴克的道德采购标准"
+  expect: [starbucks-ethical-sourcing, cafe-practices-certification]
+  category: culture
+
+# --- Products ---
+- q: "星冰乐是怎么发明的？"
+  expect: [frappuccino-history]
+  category: products
+
+- q: "南瓜拿铁是什么？"
+  expect: [pumpkin-spice-latte]
+  category: products
+
+- q: "焦糖玛奇朵怎么喝？"
+  expect: [caramel-macchiato-story]
+  category: products
+
+- q: "星巴克有哪些季节限定饮品？"
+  expect: [starbucks-seasonal-drinks]
+  category: products
+
+- q: "什么是氮气冷萃？"
+  expect: [nitro-cold-brew]
+  category: products
+
+- q: "星巴克有素食选择吗？"
+  expect: [starbucks-plant-based]
+  category: products
+
+- q: "星巴克月饼"
+  expect: [mooncake-gift-box]
+  category: products
+
+- q: "星巴克臻选门店有什么特别的？"
+  expect: [starbucks-reserve-experience, reserve-exclusive-drinks]
+  category: products
+
+- q: "Pike Place Roast是什么？"
+  expect: [pike-place-roast]
+  category: products
