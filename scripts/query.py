@@ -23,6 +23,36 @@ from scripts.lib.synonyms import expand_query_tokens
 
 
 # ============================================================
+# 回答生成 Prompt — 面向终端用户的话术模版
+# ============================================================
+
+ANSWER_SYSTEM_PROMPT = """\
+你是星巴克 AI 点单助手中的知识顾问。用户在点单过程中问了一个闲聊类问题，你需要基于提供的知识库内容生成回答。
+
+## 角色设定
+- 你是一位热爱咖啡、了解星巴克文化的专业伙伴
+- 语气温暖亲切，像一位老朋友在分享故事，而不是在念百科全书
+- 专业但不学术，有趣但不轻浮
+
+## 回答规范
+1. **长度**：控制在 100-200 字，点单场景中用户没有耐心读长文
+2. **结构**：先给核心答案（1-2 句），再补充一个有趣的细节或故事
+3. **忠实度**：只基于提供的知识内容回答，不要编造任何信息
+4. **拒答**：如果知识不足以回答，诚实说"这个我不太确定，下次帮您问问我们的咖啡大师"
+5. **引导**：回答末尾可以自然地引导回点单场景（如"要不要试试...?"），但不要强硬推销
+6. **禁止**：不要使用"根据资料"、"知识库显示"等元描述，直接讲内容
+
+## 示例
+
+用户问：星巴克的 Logo 是什么？
+好的回答：那位绿色圆圈里的女性其实是塞壬（Siren），源自古希腊神话中的海洋精灵。1971年创始人从一幅16世纪北欧木刻版画中找到了她。选择她是因为西雅图是港口城市，而塞壬象征着咖啡那种让人着迷的吸引力。您注意到了吗，2011年之后 Logo 连"Starbucks"的字都去掉了，就像耐克的勾一样，一个图标就够了。
+
+用户问：什么咖啡不酸？
+好的回答：如果您不太喜欢酸味，可以试试深烘焙的咖啡，比如我们的苏门答腊或者意式烘焙。烘焙越深，酸度越低，取而代之的是浓郁的巧克力和烟熏风味。要不要来一杯深烘的美式？
+"""
+
+
+# ============================================================
 # 本地关键词检索（不依赖外部 LLM）
 # ============================================================
 
@@ -65,13 +95,13 @@ def compute_coverage(q_core_tokens: set[str], page_all_tokens: set[str]) -> floa
 
 def get_confidence(top_score: float, top_coverage: float) -> str:
     """基于得分和覆盖度计算 confidence level"""
-    if top_score <= 0 or top_coverage <= 0:
+    if top_score <= 0:
         return "NONE"
-    if top_score >= 15 and top_coverage >= 0.5:
+    if top_score >= 15 and top_coverage >= 0.4:
         return "HIGH"
-    if top_score >= 8 and top_coverage >= 0.3:
+    if top_score >= 5 and top_coverage >= 0.2:
         return "MEDIUM"
-    if top_score >= 3:
+    if top_score >= 1.5:
         return "LOW"
     return "NONE"
 
@@ -88,8 +118,9 @@ def search_wiki(question: str, top_k: int = 5) -> list[tuple[Path, float, dict]]
     # 同义词扩展
     q_tokens = expand_query_tokens(raw_tokens)
 
-    # 保留原始 query 的核心 token（用于 coverage 计算）
-    q_core = raw_tokens
+    # 核心 token 用于 coverage 计算
+    # 只保留 2-gram（最小有意义单元）+ 英文词，排除跨语义边界的长 n-gram 噪声
+    q_core = {t for t in raw_tokens if len(t) == 2 or re.match(r'^[a-z]+$', t)}
 
     results = []
     for page_path in list_wiki_pages():
@@ -115,16 +146,21 @@ def search_wiki(question: str, top_k: int = 5) -> list[tuple[Path, float, dict]]
             continue
 
         score = 0.0
+        # 区分：原始 token 匹配 vs 同义词扩展匹配
+        direct_overlap = raw_tokens & p_tokens
+        synonym_overlap = overlap - raw_tokens  # 仅通过同义词扩展命中的
         for token in overlap:
             length_boost = len(token) if len(token) >= 3 else 1
+            # 同义词扩展命中的 token 给 80% 权重（仍然有价值）
+            syn_factor = 0.8 if token in synonym_overlap else 1.0
             if token in title:
-                score += 10.0 * length_boost
+                score += 10.0 * length_boost * syn_factor
             if any(token in t for t in tags):
-                score += 6.0 * length_boost
+                score += 6.0 * length_boost * syn_factor
             if token in body[:500]:
-                score += 2.0
+                score += 2.0 * syn_factor
             elif token in body:
-                score += 0.5
+                score += 0.5 * syn_factor
 
         for token in stem_overlap:
             score += 15.0
@@ -137,12 +173,18 @@ def search_wiki(question: str, top_k: int = 5) -> list[tuple[Path, float, dict]]
         coverage = compute_coverage(q_core, p_tokens_full)
 
         # Coverage 加权：coverage 低的页面得分打折
-        # 这解决了"咖啡机压力泵"匹配到 espresso 页面的问题
-        # espresso 页面能匹配"咖啡"相关词但"压力泵"完全没覆盖 → coverage 低
-        if coverage < 0.3:
-            score *= coverage * 2  # 严重惩罚
-        elif coverage < 0.5:
-            score *= 0.7
+        # 短 query（core token 少）放宽 coverage 要求
+        core_count = len(q_core)
+        if core_count <= 4:
+            # 短 query：只要有任何匹配就不过度惩罚
+            if coverage == 0:
+                score *= 0.1
+        else:
+            # 长 query：严格 coverage 惩罚
+            if coverage < 0.2:
+                score *= coverage * 2
+            elif coverage < 0.4:
+                score *= 0.7
 
         if score > 0:
             meta_with_coverage = dict(meta)
@@ -203,12 +245,9 @@ def query_for_claude_code(question: str) -> str:
 
     output += "\n\n---\n\n"
     output += "## 回答指引\n\n"
-    output += "请基于以上知识页面回答用户问题。要求：\n"
-    output += "- 准确：只基于提供的知识内容回答，不要编造\n"
-    output += "- 调性：温暖、专业、有故事感，符合星巴克品牌气质\n"
-    output += "- 在回答末尾注明参考的 wiki 页面\n"
+    output += ANSWER_SYSTEM_PROMPT
     if confidence == "LOW":
-        output += "- 如果知识不足以完整回答，请诚实说明\n"
+        output += "\n\n> 注意：confidence=LOW，知识可能不足，优先考虑诚实拒答。\n"
 
     return output
 
@@ -229,8 +268,7 @@ def query_with_api(question: str) -> str:
 返回 JSON：{"pages": ["brand/xxx.md"], "reason": "原因"}
 只返回 JSON。"""
 
-    ANSWER_SYSTEM = """你是星巴克的知识顾问。基于提供的 wiki 知识页面回答用户问题。
-要求：准确、温暖专业、200字以内、注明参考页面。"""
+    ANSWER_SYSTEM = ANSWER_SYSTEM_PROMPT
 
     print(f"搜索中: {question}")
     rank_result = call_llm_json(
